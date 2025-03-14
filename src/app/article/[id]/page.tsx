@@ -1,6 +1,9 @@
 import Image from "next/image";
+// interface ArticleDetailProps {
+//   params: { id: string };
+// }
 interface ArticleDetailProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 const articles = [
   {
@@ -27,8 +30,9 @@ export async function generateStaticParams() {
     id: article.id,
   }));
 }
-const ArticleDetail = ({ params }: ArticleDetailProps) => {
-  const article = articles.find((a) => a.id === params.id);
+const ArticleDetail = async ({ params }: ArticleDetailProps) => {
+  const { id } = await params;
+  const article = articles.find((a) => a.id === id);
 
   if (!article) {
     return <p className="text-center text-gray-500">Bài viết không tồn tại!</p>;
