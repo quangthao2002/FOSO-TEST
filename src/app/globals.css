@@ -1,17 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #F9FBFC;
   --foreground: #F9FBFC;
+  --font-sans: 'Raleway', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: 'Raleway', sans-serif;
-  --font-mono: var(--font-geist-mono);
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,7 +17,7 @@
 body {
   background: var(--background);
   color: #231F20;
-  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 
 ul {
