@@ -1,4 +1,7 @@
 import Image from "next/image";
+interface ArticleDetailProps {
+  params: { id: string };
+}
 const articles = [
   {
     id: "1",
@@ -18,10 +21,12 @@ const articles = [
   },
 ];
 
-interface ArticleDetailProps {
-  params: { id: string };
+// Hàm này giúp Next.js biết các giá trị hợp lệ cho `params.id`
+export async function generateStaticParams() {
+  return articles.map((article) => ({
+    id: article.id,
+  }));
 }
-
 const ArticleDetail = ({ params }: ArticleDetailProps) => {
   const article = articles.find((a) => a.id === params.id);
 
