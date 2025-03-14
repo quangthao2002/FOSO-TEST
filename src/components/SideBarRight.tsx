@@ -150,7 +150,7 @@ const SideBarRight = () => {
           height={399}
           className="absolute top-6  object-cover"
         />
-        <div className="absolute bottom-[56px] p-6">
+        <div className="absolute bottom-[56px] px-6">
           <div className="flex flex-col gap-6">
             <p className="text-[#fff] font-bold text-xl">
               Gia nhập cộng đồng FMRP Việt – Kết nối, chia sẻ, cùng phát triển!

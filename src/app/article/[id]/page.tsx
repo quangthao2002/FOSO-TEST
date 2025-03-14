@@ -3,10 +3,12 @@ import Image from "next/image";
 //   params: { id: string };
 // }
 import SideBarRight from "@/components/SideBarRight";
+import "swiper/css";
+import SwiperComponent from "@/components/Swiper";
 interface ArticleDetailProps {
   params: Promise<{ id: string }>;
 }
-const articles = [
+const articlesDetail = [
   {
     id: "1",
     title: "Tại sao BOM quan trọng trong quản lý sản xuất?",
@@ -23,17 +25,41 @@ const articles = [
     imageUrl: "/images/bom-la-gi.png",
     date: "05/12/2023",
   },
+  {
+    id: "3",
+    title: "Cách tối ưu hoá quy trình sản xuất bằng ERP",
+    category: "Quản lý sản xuất",
+    content: "Giới thiệu về cách tối ưu hoá quy trình...",
+    imageUrl: "/images/bom-la-gi.png",
+    date: "05/12/2023",
+  },
+  {
+    id: "4",
+    title: "Cách tối ưu hoá quy trình sản xuất bằng ERP2",
+    category: "Quản lý sản xuất",
+    content: "Giới thiệu về cách tối ưu hoá quy trình...",
+    imageUrl: "/images/bom-la-gi.png",
+    date: "05/12/2023",
+  },
+  {
+    id: "5",
+    title: "Cách tối ưu hoá quy trình sản xuất bằng ERP",
+    category: "Quản lý sản xuất",
+    content: "Giới thiệu về cách tối ưu hoá quy trình...",
+    imageUrl: "/images/bom-la-gi.png",
+    date: "05/12/2023",
+  },
 ];
 
 // Hàm này giúp Next.js biết các giá trị hợp lệ cho `params.id`
 export async function generateStaticParams() {
-  return articles.map((article) => ({
+  return articlesDetail.map((article) => ({
     id: article.id,
   }));
 }
 const ArticleDetail = async ({ params }: ArticleDetailProps) => {
   const { id } = await params;
-  const article = articles.find((a) => a.id === id);
+  const article = articlesDetail.find((a) => a.id === id);
 
   if (!article) {
     return <p className="text-center text-gray-500">Bài viết không tồn tại!</p>;
@@ -614,6 +640,7 @@ const ArticleDetail = async ({ params }: ArticleDetailProps) => {
           <SideBarRight />
         </aside>
       </div>
+      <SwiperComponent />
     </div>
   );
 };
