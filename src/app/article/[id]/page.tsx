@@ -2,6 +2,7 @@ import Image from "next/image";
 // interface ArticleDetailProps {
 //   params: { id: string };
 // }
+import SideBarRight from "@/components/SideBarRight";
 interface ArticleDetailProps {
   params: Promise<{ id: string }>;
 }
@@ -47,7 +48,7 @@ const ArticleDetail = async ({ params }: ArticleDetailProps) => {
         </p>
       </div>
       <div className="py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <section className="md:col-span-2 max-w-[900px]">
+        <section className="md:col-span-2 max-w-[900px] pr-6">
           <span className="text-[#0F4F9E] text-xs font-medium px-2 py-1 bg-[#E5F0FF] rounded-lg  inline-block">
             {article.category}
           </span>
@@ -515,7 +516,7 @@ const ArticleDetail = async ({ params }: ArticleDetailProps) => {
             </div>
           </div>
         </section>
-        <aside className="flex flex-col">
+        <aside className="flex flex-col max-w-[366px]">
           <div className="flex justify-between">
             <h2 className="font-extrabold text-[#050505] text-2xl">
               Nội Dung Bài Viết
@@ -533,7 +534,7 @@ const ArticleDetail = async ({ params }: ArticleDetailProps) => {
               />
             </svg>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-6">
             <a href="#" className="text-lg text-[#33404A] mt-4 font-medium">
               1. Quy trình 5s là gì
             </a>
@@ -610,6 +611,7 @@ const ArticleDetail = async ({ params }: ArticleDetailProps) => {
               8. Các yếu tố tạo nên thành công cho quy trình 5S
             </a>
           </div>
+          <SideBarRight />
         </aside>
       </div>
     </div>

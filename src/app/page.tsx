@@ -207,10 +207,6 @@ export default function Home() {
           <SideBarRight />
         </aside>
       </main>
-
-      <footer className="bg-black text-white text-center py-4 mt-10">
-        <p className="text-white ">© 2025 FOSO. All Rights Reserved.</p>
-      </footer>
     </div>
   );
 }
