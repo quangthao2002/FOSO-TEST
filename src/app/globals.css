@@ -1,26 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9FBFC;
+  --foreground: #F9FBFC;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Raleway', sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #F9FBFC;
     --foreground: #ededed;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #231F20;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: unset;
+}
+
+ul.custom-list li::marker {
+  color: #15AA7A;
+}
+
+.custom-card {
+  border-radius: 24px;
+  background: #FFF;
+  box-shadow: 0px 1px 3px 0px rgba(18, 18, 23, 0.10), 0px 1px 2px 0px rgba(18, 18, 23, 0.06);
+}
+
+.color-primary {
+  color: #052B1E;
+}
+
+.bg-primary-btn {
+  border-radius: 40px;
+  border: 1px solid #A3EED6;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%), #1AD598;
+}
+
+.bg-linear-text {
+  color: linear-gradient(90deg, #53B086 0%, rgba(83, 176, 134, 0.99) 27.5%);
+}
+
+.shadow-custom-input {
+  box-shadow: 0px 12px 24px -4px rgba(145, 158, 171, 0.16);
+}
+
+.title-detail {
+  color: #15AA7A;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;
+  padding-bottom: 12px;
+}
+
+.title-detail-small {
+  color: #15AA7A;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.content-desc-detail {
+  color: #231F20;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  padding-bottom: 12px;
+}
+
+.bg-linear-right {
+  background: linear-gradient(37deg, #013DA0 2.16%, #0142A9 12.83%, #0148B3 23.51%, #024EBC 34.18%, #0254C5 44.85%, #025ACE 55.53%, #0261D7 66.2%, #0267E1 76.87%, #036EEA 87.55%, #0375F3 98.22%);
+}
+
+.bg-linear-right-bottom {
+  background: linear-gradient(358deg, #013DA0 2.23%, #0142A9 12.81%, #0148B3 23.39%, #024EBC 33.96%, #0254C5 44.54%, #025ACE 55.12%, #0261D7 65.7%, #0267E1 76.28%, #036EEA 86.86%, #0375F3 97.44%);
+}
+
+.beta-custom {
+  border-radius: 2px;
+  background: radial-gradient(59.8% 105.16% at 93.75% 3.57%, #1FC583 0%, #1F9285 100%);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  color: #FFF;
+  font-family: "Lexend Deca";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.bg-linear-banner-top {
+  background: linear-gradient(78deg, #013DA0 11.85%, #0142A9 20.65%, #0148B3 29.45%, #024EBC 38.25%, #0254C5 47.05%, #025ACE 55.84%, #0261D7 64.64%, #0267E1 73.44%, #036EEA 82.24%, #0375F3 91.04%);
 }
