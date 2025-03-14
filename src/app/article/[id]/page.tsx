@@ -31,7 +31,7 @@ const ArticleDetail = ({ params }: ArticleDetailProps) => {
 
   return (
     <div className="max-w-[1440px] w-full mx-auto ">
-      <div className="mt-[32] mb-[48">
+      <div className="mt-8 mb-12">
         <p className="text-gray-500 text-sm">
           Trang chủ &gt; Tài nguyên &gt;{" "}
           <span className="font-semibold">Blog</span>
