@@ -5,6 +5,7 @@ import Image from "next/image";
 import SideBarRight from "@/components/SideBarRight";
 import "swiper/css";
 import SwiperComponent from "@/components/Swiper";
+import ReactionButtons from "@/components/ReactionButtons";
 interface ArticleDetailProps {
   params: Promise<{ id: string }>;
 }
@@ -480,65 +481,11 @@ const ArticleDetail = async ({ params }: ArticleDetailProps) => {
                 Bạn thấy bài viết như thế nào
               </p>
               <p className="text-base  text-center text-[#33404A]">
-                4 phản hồi
+                6 phản hồi
               </p>
             </div>
             <div className="flex justify-center gap-10 mt-6">
-              <div className="flex flex-col items-center active px-4">
-                <Image
-                  src="/images/thumpup.png"
-                  alt="article-image"
-                  width={48}
-                  height={48}
-                  className="rounded-lg w-full h-[48px] object-cover"
-                />
-                <span className="py-1 font-bold text-base">1</span>
-                <p className="text-sm text-[#33404A]">Hữu ích</p>
-              </div>
-              <div className="flex flex-col items-center px-4">
-                <Image
-                  src="/images/heart.png"
-                  alt="article-image"
-                  width={48}
-                  height={48}
-                  className="rounded-lg w-[48] h-[48px] object-cover"
-                />
-                <span className="py-1 font-bold text-base">1</span>
-                <p className="text-sm text-[#33404A]">Hữu ích</p>
-              </div>
-              <div className="flex flex-col items-center px-4">
-                <Image
-                  src="/images/favorite.png"
-                  alt="article-image"
-                  width={48}
-                  height={48}
-                  className="rounded-lg w-[48] h-[48px] object-cover"
-                />
-                <span className="py-1 font-bold text-base">1</span>
-                <p className="text-sm text-[#33404A]">Hữu ích</p>
-              </div>
-              <div className="flex flex-col items-center px-4">
-                <Image
-                  src="/images/hushed.png"
-                  alt="article-image"
-                  width={48}
-                  height={48}
-                  className="rounded-lg w-[48] h-[48px] object-cover"
-                />
-                <span className="py-1 font-bold text-base">1</span>
-                <p className="text-sm text-[#33404A]">Hữu ích</p>
-              </div>
-              <div className="flex flex-col items-center px-4">
-                <Image
-                  src="/images/pouting.png"
-                  alt="article-image"
-                  width={48}
-                  height={48}
-                  className="rounded-lg w-[48] h-[48px] object-cover"
-                />
-                <span className="py-1 font-bold text-base">1</span>
-                <p className="text-sm text-[#33404A]">Hữu ích</p>
-              </div>
+              <ReactionButtons />
             </div>
           </div>
         </section>
@@ -640,6 +587,9 @@ const ArticleDetail = async ({ params }: ArticleDetailProps) => {
           <SideBarRight />
         </aside>
       </div>
+      <h2 className="text-[#050505] font-extrabold text-4xl mb-2">
+        Bài Viết Liên Quan
+      </h2>
       <SwiperComponent />
     </div>
   );
